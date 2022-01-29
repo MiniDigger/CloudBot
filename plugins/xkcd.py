@@ -16,8 +16,9 @@ def xkcd_info(xkcd_id, url=False):
     data = request.json()
     date = "{} {} {}".format(data['day'], months[int(data['month'])], data['year'])
     if url:
-        url = " | http://xkcd.com/" + xkcd_id.replace("/", "")
-    return "xkcd: \x02{}\x02 ({}){}".format(data['title'], date, url if url else "")
+        url = " | <http://xkcd.com/" + xkcd_id.replace("/", "") + ">"
+    img = data['img'] 
+    return "xkcd: \x02{}\x02 ({}){} {}".format(data['title'], date, url if url else "", img if img else "")
 
 
 def xkcd_search(term):
