@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  cloudbot:
+    container_name: cloudbot
+    image: "ghcr.io/minidigger/cloudbot_cloudbot"
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - cloudbot_data:/opt/cloudbot/data
+      - cloudbot_plugins:/opt/cloudbot/plugins
+    labels:
+      - "traefik.enable=false"
+
+volumes:
+  cloudbot_data:
+  cloudbot_plugins:
