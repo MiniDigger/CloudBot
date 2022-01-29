@@ -2,8 +2,7 @@ FROM ubuntu
 # work dir
 WORKDIR /opt/cloudbot
 # Expose volume
-VOLUME ["/opt/cloudbot/data"]
-VOLUME ["/opt/cloudbot/plugins"]
+VOLUME ["/opt/cloudbot/db"]
 # install build deps
 RUN  apt-get update && \
      apt-get install -y software-properties-common && \
