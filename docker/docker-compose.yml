@@ -8,11 +8,9 @@ services:
       dockerfile: docker/Dockerfile
     restart: always
     volumes:
-      - cloudbot_data:/opt/cloudbot/data
-      - cloudbot_plugins:/opt/cloudbot/plugins
+      - cloudbot_db:/opt/cloudbot/db
     labels:
       - "traefik.enable=false"
 
 volumes:
-  cloudbot_data:
-  cloudbot_plugins:
+  cloudbot_db:
