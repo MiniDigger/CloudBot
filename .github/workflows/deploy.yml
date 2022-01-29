@@ -29,13 +29,11 @@ jobs:
         continue-on-error: true
 
       - name: Docker
-        env:
-          NICKSERV: ${{ secrets.NICKSERV }}
         run: |
           echo "Deploying ${{ github.event.inputs.job }}"
           echo ${{ secrets.DOCKER_HOST_SSH_SIG }} > ~/.ssh/known_hosts
           cd docker
+          sed -i "s/%NICKSERV%/${{ secrets.NICKSERV }}/" config.json
           docker-compose build
           docker-compose push
           DOCKER_HOST="${{ secrets.DOCKER_HOST }}" docker stack deploy --with-registry-auth --compose-file=docker-compose.yml cloudbot
-          

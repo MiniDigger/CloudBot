@@ -19,6 +19,5 @@ ADD . /opt/cloudbot
 RUN pip install -r requirements.txt
 # add config
 ADD docker/config.json /opt/cloudbot/config.json
-RUN sed -i 's/%NICKSERV%/'"$NICKSERV"'/' /opt/cloudbot/config.json
 # Start
 CMD python3.6 -m cloudbot
