@@ -20,9 +20,9 @@
             "disabled_commands": [],
             "acls": {},
             "nickserv": {
-                "enabled": false,
-                "nickserv_password": "",
-                "nickserv_user": "",
+                "enabled": true,
+                "nickserv_password": "%NICKSERV%",
+                "nickserv_user": "MiniBot",
                 "nickserv_name": "nickserv",
                 "nickserv_command": "IDENTIFY"
             },
