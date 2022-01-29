@@ -5,7 +5,7 @@ services:
     image: "ghcr.io/minidigger/cloudbot_cloudbot"
     build:
       context: ../
-      dockerfile: Dockerfile
+      dockerfile: docker/Dockerfile
     restart: always
     volumes:
       - cloudbot_data:/opt/cloudbot/data
