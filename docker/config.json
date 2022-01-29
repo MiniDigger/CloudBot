@@ -15,7 +15,11 @@
             "channels": [
                 "#paper",
                 "#paper-dev",
-                "#paper-help"
+                "#paper-help",
+                "#waterfall",
+                "#waterfall-dev",
+                "#hangar",
+                "#minibot-test"
             ],
             "disabled_commands": [],
             "acls": {},
