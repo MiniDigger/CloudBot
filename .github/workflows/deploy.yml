@@ -30,7 +30,7 @@ jobs:
 
       - name: Docker
         env:
-         - NICKSERV: ${{ secrets.NICKSERV }}
+          NICKSERV: ${{ secrets.NICKSERV }}
         run: |
           echo "Deploying ${{ github.event.inputs.job }}"
           echo ${{ secrets.DOCKER_HOST_SSH_SIG }} > ~/.ssh/known_hosts
