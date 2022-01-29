@@ -93,7 +93,7 @@
         "octopart": "",
         "wordnik": ""
     },
-    "database": "sqlite://opt/cloudbot/db/cloudbot.db",
+    "database": "sqlite:////opt/cloudbot/db/cloudbot.db",
     "plugin_loading": {
         "use_whitelist": false,
         "blacklist": [
