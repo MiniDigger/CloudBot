@@ -9,7 +9,7 @@ RUN  apt-get update && \
      apt-get install -y software-properties-common && \
      add-apt-repository ppa:deadsnakes/ppa && \
      apt-get update && \
-     apt-get install -y python3.5-dev git libenchant-dev libxml2-dev libxslt-dev zlib1g-dev && \
+     apt-get install -y python3.5-dev git libenchant-dev libxml2-dev libxslt-dev zlib1g-dev curl nano && \
      rm -rf /var/lib/apt/lists/*
 # install pip
 RUN curl -Ls https://bootstrap.pypa.io/get-pip.py | python3.5
