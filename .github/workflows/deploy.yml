@@ -24,6 +24,10 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Cache Docker Layers
+        uses: satackey/action-docker-layer-caching@v0.0.11
+          continue-on-error: true
+
       - name: Docker
         run: |
           echo "Deploying ${{ github.event.inputs.job }}"

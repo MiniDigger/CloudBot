@@ -9,8 +9,8 @@
                 "ignore_cert": true,
                 "password": ""
             },
-            "nick": "paperchan",
-            "user": "paperchan",
+            "nick": "MiniBot",
+            "user": "MiniBot",
             "avoid_notices": false,
             "channels": [
                 "#paper",
