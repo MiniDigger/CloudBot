@@ -98,6 +98,7 @@
         "use_whitelist": false,
         "blacklist": [
             "update"
+            "youtube"
         ],
         "whitelist": []
     },
